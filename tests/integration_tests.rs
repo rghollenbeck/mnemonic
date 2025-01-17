@@ -59,3 +59,7 @@ fn test_invalid_word() {
     assert_eq!(word_to_binary(&word_list, "notaword"), None);
 }
 
+pub fn is_valid_word(word_list: &WordList, word: &str) -> bool {
+    word_list.wordlist.iter().any(|entry| entry.word == word)
+}
+
